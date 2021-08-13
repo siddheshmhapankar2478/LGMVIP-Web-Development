@@ -1,0 +1,676 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+/* html{
+    scroll-behavior: smooth;
+    transition: 2s;
+} */
+img{
+    padding: 20px 0px;
+}
+head{
+    position: relative;
+    margin: 0px;
+}
+/*-----------------------------------------------------------
+---------------------- NAVBAR--------------------------------
+----------------------------------------------------------- */
+.navbar{
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    background-color: black;
+    color: white;
+    width: 100%;
+    font-size: 22px;
+    height: 65px;
+}
+.nav-right{
+    float: right;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 0px;
+    z-index: 10;
+}
+header .logo{
+    width: 30%;
+    float: left;
+    position: relative;
+    letter-spacing: 2px;
+    transition: 0.6s;
+    justify-content: center;
+    align-items: center;
+    text-transform: none;
+}
+header .logo a{
+    font-weight: 500;
+    padding-top: 13px;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+.colorchange{
+    animation: colorlist 1s infinite;
+}
+@keyframes colorlist{
+    0%{color: red;}
+    25%{color: blue;}
+    75%{color: green;}
+    25%{color: yellow;}
+
+}
+.logo img{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    transform: none;
+}
+.navbar ul {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+}
+.home-padding{
+    padding-left: 60px;
+}
+.navbar ul li {
+    margin-left: 50px;
+    position: relative;
+    list-style: none;
+}
+.navbar ul li a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    letter-spacing: 2px;
+    margin: 0 5px;
+}
+.nav-list li:hover{
+    border-bottom: 5px red solid; 
+}
+.nav-list li a:hover{
+    color: royalblue;
+}
+.navbar-para{
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    text-align: left;
+    padding: 0px 55% 20px 130px;
+}
+/*-----------------------------------------------------
+----------------background-----------------------------
+----------------------------------------------------- */
+.background{
+    background-blend-mode: darken;/*How does it render */
+    background-repeat: no-repeat;  
+    background-position: center;
+    background-size: cover;
+    width:auto;
+}
+.background1{
+    background-image: url(../images/background1.jpg);
+}
+.background2{
+    background-attachment: fixed;
+    background-image: url(../images/background2.jpg);
+}
+.background3{
+    background-image: url(../images/background3.jpg);
+}
+/*-----------------------------------------------------
+---------------- BUTTONS-------------------------------
+----------------------------------------------------- */
+/*Learn More Button*/
+button a{
+    position: absolute;
+    transform:translate(-50%,-50%);
+    padding: 15px 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(255, 251, 251);
+    letter-spacing: 2px;
+    font-size: 20px;
+    background-color: purple;
+}
+button a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #03a9f4;
+    z-index: -1;
+    transition: transform 0.5s;
+	transform-origin: bottom right;
+	transform: scale(0);
+}
+button a:hover:before
+{
+    transition: transform 0.5s;
+    transform-origin: top left;
+	transform: scale(1);
+}
+button a:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:transparent;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    z-index: -1;
+    transition: transform 0.5s;
+	transform-origin: top left;
+	transform: scale(1);
+}
+button a:hover:after{
+	transition: transform 0.5s;
+	transform-origin: bottom right;
+	transform: scale(0);
+}
+.btn-class{
+    border-radius: 30px;
+    border: 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 20px 20px 20px 0px;
+    width: 150px;
+    height:40px;
+    color: white;
+    box-shadow: none;
+    border: 2px black solid;
+}
+.btn-class:hover{
+    cursor: pointer;
+}
+button:hover{
+    color: white;
+    background-color: #2cf474;
+}
+.btn-yellow{
+    background-color: yellow;
+    color: black;
+}
+.send-btn{
+    width: 300px;
+    background-color: black;
+    color: white;
+    margin-left: 20px;
+}
+.btn-purple{
+    background-color: purple;
+    color: white;
+}
+.learn-more-btn{
+    margin: 40px 30px 150px 100px;
+}
+.learn-more-btn2{
+    margin: 0px 30px 150px 0px;
+}
+.btn2{
+    margin-left: 20px;
+    margin-right: 160px;
+    margin-top: 20px;
+    float: right;
+}
+.launch-btn{
+    width: 180px;
+    margin-bottom: 50px;
+}
+.center-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*--------------------------------------------------
+------------SECTION1--------------------------------
+-------------------------------------------------*/
+.h1-heading{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0% auto;
+    color: black;
+    font-size: 1.5em;
+    font-weight: 600;
+    padding-top: 65px;
+    padding-bottom: 15px;
+    justify-content: center;
+}
+.text-big{
+    color: white;
+    text-align: left;
+    font-weight: 600;
+    padding: 170px 55% 20px 130px;
+    font-size: 3em;
+}
+/*-------------------------------------------------
+----------CONTAINER & CARD-------------------------
+-------------------------------------------------*/
+.container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0px;
+}
+.card{
+    background: white;
+    width: 300px;
+    margin: 10px;
+    box-shadow: 0 0 10px 5px rgba(128, 128, 128, 0.2); 
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: all ease-out;
+    cursor: pointer;
+}
+.card-pricing-2{
+    transform: scale(1.07);
+}
+.card-pricing-2:hover{
+    transform: scale(1.1);
+}
+.card-image{
+    height: 240px;
+}
+.card-image img{
+    padding: 0px;
+}
+/*-------------------------------------------------
+----------WELCOME TO JIPPY-------------------------
+-------------------------------------------------*/
+.welcome-section{
+    height: fit-content;
+    display: flexbox;
+}
+.h4-purple{
+    color: purple;
+}
+.para-main{
+    padding: 5px 20px;
+}
+.h4-main{
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px 10px;
+}
+.para-welcome{
+    float: left;
+}
+.text-welcome{
+    padding: 20px;
+    color: black;
+    font-size: 16px;
+    text-align: left;
+}
+.welcome-img{
+    float: right;
+}
+.welcome-img img{
+    padding: 20px;
+}
+.welcome-img img:hover{
+    cursor: pointer;
+}
+/*---------------------------------------------
+---------------- PROJECTS----------------------
+--------------------------------------------- */
+.project-section{
+    background-color: #b7e2fc;
+    height: fit-content;
+}
+.h1-margin-bottom{
+    padding-bottom: 30px;
+}
+.project-section-white{
+    background-color: white;
+}
+.project-para{
+    height: 110px;
+}
+.yellow-bkg{
+    background-color: yellow;
+}
+.grey-bkg{
+    background-color: #e8e4e4;
+}
+/*------------------------------------------------------
+---------------------Pricing Table----------------------
+------------------------------------------------------*/
+.pricing-section{
+    background-color: white;
+    height: fit-content;
+}
+.h4-grey{
+    text-align: center;
+    color: grey;
+    font-size: 18px;
+    padding: 0px 3% 10px 3%;
+    align-items: center;
+}
+.center-para{
+    text-align: center;
+    padding: 20px 40px;
+}
+.video-project-section{
+    height: fit-content;
+    background-color: #B300B2;
+}
+.video-bkg {
+    background: linear-gradient(180deg, rgb(179,0,178) 100%);
+}
+/*------------------------------------------------------
+---------------------Zippy Team-------------------------
+------------------------------------------------------*/
+.team-section{
+    background-color: white;
+    height: fit-content;
+}
+.img-section{
+    height: 320px;
+    padding: 10px;
+}
+.img-card{
+    background: white;
+    width: 320px;
+    margin: 20px;
+}
+.plain-card{
+    width: 350px;
+}
+.video-card{
+    margin: 10px;
+    margin-bottom: 50px;
+    padding: 8px 2px 0px 2px;
+}
+.img-card .h4-main{
+    padding-bottom: 0;
+    padding-top: 0;
+}
+.img-card .h4-grey{
+    padding-bottom: 0;
+}
+.img-card img{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+.img-card img:hover{
+    cursor: pointer;
+}
+.img-card .center-para{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.img-card i{
+    color: black;
+}
+.life-in-zippy-section{
+    /* background-color: khaki; */
+    height: fit-content;
+}
+.life-in-zippy-section img{
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 50px;
+}
+/*----------------------------------------
+------------- Newsletter Signup-----------
+--------------------------------------- */
+.newsletter-section{
+    height: fit-content;
+    justify-content: center;
+    align-items: center;
+}
+.textbox{
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+}
+.signup-btn{
+    height: 55px;
+    margin: 0%;
+    border-radius: 0;
+    margin-left: 10px;
+    margin-bottom: 50px;
+}
+.news-heading{
+    font-size: 3em;
+    font-weight: 600;
+    padding-top: 50px;
+    color: white;
+}
+/*------------------------------------------
+----------------- Blog----------------------
+----------------------------------------- */
+.blog-para{
+    padding: 0px 10%;
+    text-align: center;
+    margin: 0px 5% 20px 5%;
+    height: 110px;
+}
+.blog-section{
+    background-color: #b7e2fc;
+    height: fit-content;
+}
+.blog-section .btn-class{
+    margin-top: 10px;
+}
+/*----------------------------------------
+-----------CONTACT US---------------------
+-----------------------------------------*/
+.contact-details{
+    background-color:yellow;
+    width: 50%;
+    height: 750px;
+    margin: 0%;
+    float: right;
+}
+.contact-label{
+    font-weight: 400;
+    margin-left: 20px;
+}
+.contact-textbox{
+    margin: 10px;
+    margin-left: 20px;
+    width: 300px;
+}
+.map-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.map-image{
+    width: 50%;
+    float: left;
+}
+.map-image img{
+    padding: 0px;
+    transform: none;
+}
+.messagebox{
+    margin: 10px;
+    margin-left: 20px;
+}
+.h1-contact{
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 25px;
+}
+.contactus-section{
+    display: flex;
+    height: fit-content;
+}
+/* ---------------------------------------
+-----------------FOLLOW US----------------
+--------------------------------------  */
+.office-addr-card{
+    width: 250px;
+    box-shadow: none;
+}
+.office-addr-card:hover{
+    transform: none;
+    transition: none;
+}
+.followus-section{
+    background-color: black;
+    height: fit-content;
+}
+.h4-white{
+    color: white;
+}
+.follow-main{
+    color: white;
+    padding-top: 20px;
+}
+.icons a{
+    padding: 0px 10px;
+    color: white;
+}
+.icons{
+    margin:15px;
+    margin-top: 0px;
+}
+.icons i:hover{
+    color: royalblue;
+}
+.center-para a{
+    text-decoration: none;
+    color: white;
+}
+.center-para a:hover{
+    color: royalblue;
+}
+/* ---------------------------------------
+-----------------MOBILE VIEW--------------
+--------------------------------------  */
+.hamburger{
+    display: none;
+    position: absolute;
+    cursor: pointer;
+    right: 5%;
+    top: 15px;
+    border: 3px yellow solid;
+    border-radius: 5px;
+}
+.line{
+    background-color: white;
+    width: 30px;
+    height: 3px;
+    margin: 3px;
+    
+}
+@media only screen and (max-width: 768px){
+    .nav-list{
+        flex-direction: column;
+        line-height: 50px;
+    }
+    .navbar{
+        flex-direction: column;
+        height: 450px;
+        transition: all 0.3s ease-in-out;
+    }
+    .navbar .logo{
+        margin: auto;
+    }
+    .navbar .hamburger{
+        display: block;
+    }
+    .h-nav-resp{
+        height: 72px;
+    }
+    .background1{
+        height: 700px;
+    }
+    .learn-more-btn{
+        float: left;
+        /* margin-bottom: 80px; */
+    }
+    .learn-more-btn a{
+        margin-left: 40px;
+    }
+    .h1-heading{
+        padding-top: 72px;
+    }
+    .btn2{
+        margin: 120px 0px 0px 10px;
+        float: left;
+    }
+    .learn-more-btn2{
+        margin: 0px 0px 100px 0px;
+    }
+    .v-class-resp{
+        opacity: 0;
+    }
+    .section{
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .text-big{
+        margin-top: 70px;
+        padding: 30px;
+        padding-right: 20%;
+        text-align: left;
+    }
+    .navbar-para{
+        padding: 30px;
+        padding-right: 20%;
+        text-align: left;
+    }
+    .text-welcome{
+        padding-left: 30px;
+    }
+    .life-in-zippy-section img{
+        height: 400px;
+        width: 500px;
+        padding: 10px 50px;
+    }
+    .text-big{
+        font-size: 2em;
+    }
+    .background2{
+        height: 300px;
+    }
+    .news-heading{
+        font-size: 2em;
+    }
+    #emailId{
+        width: 60%;
+    }
+    .map-image{
+        width: 100%;
+    }
+    .map-image img{
+        width: 100%;
+        height: 500px;
+    }
+    .contact-details{
+        width: 100%;
+        height: fit-content;
+    }
+    .textarea1{
+        width: 60%;
+    } 
+}
+
+
+
